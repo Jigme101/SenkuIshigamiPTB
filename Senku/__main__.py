@@ -105,7 +105,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-KURUMI_IMG
+KURUMI_IMG = "https://telegra.ph/file/815585366fbadf3de2d9e.jpg"
 MUZANSTART = "https://telegra.ph/file/c6a6564f8175d9303a61a.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
