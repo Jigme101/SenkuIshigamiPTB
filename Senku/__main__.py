@@ -82,22 +82,22 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hello {}! Nice to meet you! 
-I am *Senku Ishigami* , a group management bot based on the anime *Dr Stone*[!](https://telegra.ph/file/879b6a55652d0fbd4463a.jpg)
+I am *Muzan Kibutsuji* , a group management bot based on the anime *Demon Slayer*[!](https://telegra.ph/file/6e16f3f6693253faff0cb.jpg)
 *Click on the Commands Button below to go through my commands.*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text=" Add Senku to your Group", url="t.me/Senkubest_bot?startgroup=true"),
+            text=" Add Muzan to your Group", url="t.me/MuzanKibutsuji_Robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="❓Help", callback_data="senku_"),
+        InlineKeyboardButton(text="❓Help", callback_data="muzan_"),
         InlineKeyboardButton(text=" 💬Commands", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="🚨Support Grp", url="https://t.me/SenkuSupportChat"),
-        InlineKeyboardButton(text="❗Updates", url="https://t.me/senkubotupdates"),
+        InlineKeyboardButton(text="🚨Support Grp", url="https://t.me/DemonDomain"),
+        InlineKeyboardButton(text="❗Updates", url="https://t.me/Muzan_Updates"),
    
     ], 
 ]
@@ -105,8 +105,8 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-KURUMI_IMG = "https://telegra.ph/file/78a95df585a55187568ee.jpg"
-SENKUSTART = "https://telegra.ph/file/c6a6564f8175d9303a61a.mp4"
+KURUMI_IMG
+MUZANSTART = "https://telegra.ph/file/c6a6564f8175d9303a61a.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @SenkuIshigamiXD \
@@ -353,7 +353,7 @@ def senku_about_callback(update, context):
     query = update.callback_query
     if query.data == "senku_":
         query.message.edit_text(
-            text="๏ I'm *Senku*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Muzan*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -361,18 +361,18 @@ def senku_about_callback(update, context):
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
             "\n\n_Senku's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for SenkuBot.",
+            "\n\n Click on button bellow to get basic help for MuzanBot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="senku_back")
+                    InlineKeyboardButton(text="Back", callback_data="muzan_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "senku_back":
+    elif query.data == "muzan_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
